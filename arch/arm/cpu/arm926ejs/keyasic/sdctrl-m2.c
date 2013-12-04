@@ -586,7 +586,6 @@ int init_m2(void)
 		}
     }
 
-    word_write(0xa000a004, 0x1);
     return 0;
 }
 
@@ -645,14 +644,24 @@ int command_55_get_scr()
 	return 0;
 }
 
+void SelectM2(void) {
+    word_write(SDSW_M1_CTRL0, 0x0);
+    word_write(SDSW_M2_CTRL0, 0x1);
+}
+
+void DeselectM2(void) {
+    word_write(SDSW_M1_CTRL0, 0x1);
+    word_write(SDSW_M2_CTRL0, 0x0);
+}
 
 //------------------------------------------------------------------------------
 int ReInitCard()
 {
 
     init_m2();
+    SelectM2();
 
-    if(HCmdNoData(0x00, 0x00, 0x00, 0x00, 0x00, 0x30,0x11))
+    if(HCmdNoData(0x00, 0x00, 0x00, 0x00, 0x00, 0x30,0x11)) goto fail;
 
 
     RCA0 = 0;
@@ -698,8 +707,10 @@ int ReInitCard()
     if(HCmdNoData(0x00, 0x00, 0x00, 0x02, 0x06, 0x38, 0x11))
 		goto fail;
 
+    DeselectM2();
     return 0;
 fail:
+    DeselectM2();
     return 1;
 }
 

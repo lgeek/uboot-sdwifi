@@ -19,3 +19,6 @@ void sim_uart_tx(char tmp);
 
 int CardWrite_single_pin(unsigned int blk_no, int blk_num);
 int CardWrite_cmd(unsigned int blk_no, int blk_order);
+
+void SelectM2(void);
+void DeselectM2(void);

@@ -55,6 +55,8 @@ uint32_t mmc_bread(int dev_num, uint32_t blknr, lbaint_t blkcnt, void *dst)
 	int i = 0;
 	int n = blkcnt;
 	int m = 512;
+	
+	SelectM2();
 
 	for (i = 0; i + m < blkcnt; i += m)
 	{
@@ -66,6 +68,9 @@ uint32_t mmc_bread(int dev_num, uint32_t blknr, lbaint_t blkcnt, void *dst)
 
 	if (n > 0)
 		CardRead_single_pin((unsigned int)dst, blknr, n);
+		
+	DeselectM2();
+
 	return 1;
 }
 
@@ -164,10 +169,10 @@ int mmc_legacy_init(int verbose)
 	//test_switch_register();
 	printf("MMC Init Card ...\n");
 	InitCardReader();
-	InitCard();
+	ReInitCard();
 
 	mmc_blk_dev.if_type = IF_TYPE_MMC;
-	mmc_blk_dev.part_type = PART_TYPE_UNKNOWN; //PART_TYPE_DOS;
+	mmc_blk_dev.part_type = PART_TYPE_DOS;
 	mmc_blk_dev.dev = 0;
 	mmc_blk_dev.lun = 0;
 	mmc_blk_dev.type = 0;
@@ -178,20 +183,17 @@ int mmc_legacy_init(int verbose)
 	mmc_blk_dev.removable = 0;
 	mmc_blk_dev.block_read = mmc_bread;
 
-	//ka2000_mmc_initialize();
-	find_fat_partition(&mmc_blk_dev);
-
 	if (fat_register_device(&mmc_blk_dev, 1))
 	{
-		//printf("Could not register MMC fat device\n");
+		printf("Could not register MMC fat device\n");
 		init_part(&mmc_blk_dev);
 	}
 
     if (mmc_inited == 0)
     {
         mmc_inited = 1;
-        detect_program_bin();
-        detect_test_bin();
+        //detect_program_bin();
+        //detect_test_bin();
     }
 
     mmc_inited = 1;
