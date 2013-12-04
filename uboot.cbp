@@ -1,0 +1,599 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="uboot" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin\Debug\uboot" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj\Debug\" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+		</Compiler>
+		<Unit filename="arch\arm\cpu\arm926ejs\keyasic\cpu.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="arch\arm\cpu\arm926ejs\keyasic\ka2000.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="arch\arm\cpu\arm926ejs\keyasic\ka2000_define.h" />
+		<Unit filename="arch\arm\cpu\arm926ejs\keyasic\ka2000_mmc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="arch\arm\cpu\arm926ejs\keyasic\ka2000_spi.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="arch\arm\cpu\arm926ejs\keyasic\sdctrl-m2.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="arch\arm\cpu\arm926ejs\keyasic\timer.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="arch\arm\lib\_ashldi3.S" />
+		<Unit filename="arch\arm\lib\_ashrdi3.S" />
+		<Unit filename="arch\arm\lib\_divsi3.S" />
+		<Unit filename="arch\arm\lib\_lshrdi3.S" />
+		<Unit filename="arch\arm\lib\_modsi3.S" />
+		<Unit filename="arch\arm\lib\_udivsi3.S" />
+		<Unit filename="arch\arm\lib\_umodsi3.S" />
+		<Unit filename="arch\arm\lib\board.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="arch\arm\lib\bootm.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="arch\arm\lib\cache-cp15.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="arch\arm\lib\cache.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="arch\arm\lib\div0.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="arch\arm\lib\eabi_compat.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="arch\arm\lib\interrupts.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="arch\arm\lib\reset.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="board\keyasic\common\misc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="board\keyasic\ka2000\board_init.S" />
+		<Unit filename="board\keyasic\ka2000\ka2000.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="board\keyasic\ka2000\led.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="common\bedbug.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="common\cmd_ambapp.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="common\cmd_bdinfo.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="common\cmd_bedbug.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="common\cmd_bmp.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="common\cmd_boot.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="common\cmd_bootldr.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="common\cmd_bootm.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="common\cmd_cache.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="common\cmd_console.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="common\cmd_cplbinfo.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="common\cmd_cramfs.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="common\cmd_dataflash_mmc_mux.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="common\cmd_date.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="common\cmd_dcr.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="common\cmd_df.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="common\cmd_diag.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="common\cmd_display.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="common\cmd_dtt.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="common\cmd_echo.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="common\cmd_eeprom.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="common\cmd_elf.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="common\cmd_exit.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="common\cmd_ext2.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="common\cmd_fat.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="common\cmd_fdc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="common\cmd_fdos.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="common\cmd_fdt.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="common\cmd_flash.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="common\cmd_fpga.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="common\cmd_help.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="common\cmd_i2c.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="common\cmd_ide.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="common\cmd_immap.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="common\cmd_irq.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="common\cmd_itest.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="common\cmd_jffs2.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="common\cmd_license.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="common\cmd_load.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="common\cmd_log.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="common\cmd_mac.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="common\cmd_mem.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="common\cmd_mfsl.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="common\cmd_mgdisk.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="common\cmd_mii.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="common\cmd_misc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="common\cmd_mmc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="common\cmd_mmc_org.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="common\cmd_mp.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="common\cmd_mtdparts.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="common\cmd_nand.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="common\cmd_net.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="common\cmd_nvedit.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="common\cmd_onenand.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="common\cmd_otp.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="common\cmd_pci.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="common\cmd_pcmcia.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="common\cmd_portio.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="common\cmd_reginfo.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="common\cmd_reiser.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="common\cmd_sata.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="common\cmd_scsi.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="common\cmd_setexpr.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="common\cmd_sf.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="common\cmd_source.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="common\cmd_spi.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="common\cmd_spibootldr.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="common\cmd_strings.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="common\cmd_terminal.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="common\cmd_test.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="common\cmd_tsi148.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="common\cmd_ubi.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="common\cmd_ubifs.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="common\cmd_universe.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="common\cmd_usb.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="common\cmd_version.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="common\cmd_vfd.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="common\cmd_ximg.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="common\cmd_yaffs2.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="common\command.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="common\console.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="common\ddr_spd.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="common\dlmalloc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="common\env_common.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="common\env_dataflash.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="common\env_eeprom.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="common\env_embedded.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="common\env_flash.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="common\env_mgdisk.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="common\env_nand.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="common\env_nowhere.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="common\env_nvram.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="common\env_onenand.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="common\env_sf.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="common\exports.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="common\fdt_support.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="common\flash.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="common\hush.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="common\hwconfig.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="common\image.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="common\iomux.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="common\kallsyms.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="common\kgdb.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="common\kgdb_stubs.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="common\lcd.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="common\lynxkdi.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="common\main.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="common\memsize.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="common\miiphyutil.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="common\modem.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="common\s_record.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="common\serial.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="common\stdio.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="common\system_map.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="common\update.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="common\usb.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="common\usb_kbd.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="common\usb_storage.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="common\xyzModem.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="drivers\mmc\Makefile" />
+		<Unit filename="drivers\mmc\mmc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="drivers\mtd\spi\spi_flash.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="drivers\serial\ns16550.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="fs\fat\fat.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="fs\fat\file.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="include\configs\ka2000.h" />
+		<Unit filename="include\mmc.h" />
+		<Unit filename="include\ns16550.h" />
+		<Unit filename="lib\addr_map.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="lib\bzlib.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="lib\bzlib_crctable.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="lib\bzlib_decompress.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="lib\bzlib_huffman.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="lib\bzlib_private.h" />
+		<Unit filename="lib\bzlib_randtable.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="lib\circbuf.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="lib\crc16.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="lib\crc32.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="lib\ctype.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="lib\display_options.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="lib\div64.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="lib\gunzip.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="lib\ldiv.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="lib\lmb.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="lib\md5.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="lib\net_utils.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="lib\rbtree.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="lib\sha1.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="lib\sha256.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="lib\string.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="lib\strmhz.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="lib\time.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="lib\vsprintf.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="lib\zlib.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="tools\bin2header.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="tools\bmp_logo.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="tools\default_image.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="tools\envcrc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="tools\fdt_host.h" />
+		<Unit filename="tools\fit_image.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="tools\gen_eth_addr.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="tools\getline.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="tools\getline.h" />
+		<Unit filename="tools\img2srec.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="tools\imximage.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="tools\imximage.h" />
+		<Unit filename="tools\inca-swap-bytes.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="tools\kwbimage.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="tools\kwbimage.h" />
+		<Unit filename="tools\mingw_support.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="tools\mingw_support.h" />
+		<Unit filename="tools\mkimage.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="tools\mkimage.h" />
+		<Unit filename="tools\mpc86x_clk.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="tools\ncb.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="tools\os_support.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="tools\os_support.h" />
+		<Unit filename="tools\ubsha1.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

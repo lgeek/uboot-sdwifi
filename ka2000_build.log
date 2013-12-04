@@ -1,0 +1,255 @@
+for dir in tools examples/standalone examples/api arch/arm/cpu/arm926ejs /home/engtien/Trek2000/u-boot-2010.06-rc1/arch/arm/cpu/arm926ejs/ ; do \
+		make -C $dir _depend ; done
+make[1]: Entering directory `/home/engtien/Trek2000/u-boot-2010.06-rc1/tools'
+make[1]: Nothing to be done for `_depend'.
+make[1]: Leaving directory `/home/engtien/Trek2000/u-boot-2010.06-rc1/tools'
+make[1]: Entering directory `/home/engtien/Trek2000/u-boot-2010.06-rc1/examples/standalone'
+make[1]: Nothing to be done for `_depend'.
+make[1]: Leaving directory `/home/engtien/Trek2000/u-boot-2010.06-rc1/examples/standalone'
+make[1]: Entering directory `/home/engtien/Trek2000/u-boot-2010.06-rc1/examples/api'
+make[1]: Nothing to be done for `_depend'.
+make[1]: Leaving directory `/home/engtien/Trek2000/u-boot-2010.06-rc1/examples/api'
+make[1]: Entering directory `/home/engtien/Trek2000/u-boot-2010.06-rc1/arch/arm/cpu/arm926ejs'
+make[1]: Nothing to be done for `_depend'.
+make[1]: Leaving directory `/home/engtien/Trek2000/u-boot-2010.06-rc1/arch/arm/cpu/arm926ejs'
+make[1]: Entering directory `/home/engtien/Trek2000/u-boot-2010.06-rc1/arch/arm/cpu/arm926ejs'
+make[1]: Nothing to be done for `_depend'.
+make[1]: Leaving directory `/home/engtien/Trek2000/u-boot-2010.06-rc1/arch/arm/cpu/arm926ejs'
+make -C tools all
+make[1]: Entering directory `/home/engtien/Trek2000/u-boot-2010.06-rc1/tools'
+make[1]: Leaving directory `/home/engtien/Trek2000/u-boot-2010.06-rc1/tools'
+make -C examples/standalone all
+make[1]: Entering directory `/home/engtien/Trek2000/u-boot-2010.06-rc1/examples/standalone'
+make[1]: Nothing to be done for `all'.
+make[1]: Leaving directory `/home/engtien/Trek2000/u-boot-2010.06-rc1/examples/standalone'
+make -C examples/api all
+make[1]: Entering directory `/home/engtien/Trek2000/u-boot-2010.06-rc1/examples/api'
+make[1]: Nothing to be done for `all'.
+make[1]: Leaving directory `/home/engtien/Trek2000/u-boot-2010.06-rc1/examples/api'
+make -C arch/arm/cpu/arm926ejs start.o
+make[1]: Entering directory `/home/engtien/Trek2000/u-boot-2010.06-rc1/arch/arm/cpu/arm926ejs'
+make[1]: `start.o' is up to date.
+make[1]: Leaving directory `/home/engtien/Trek2000/u-boot-2010.06-rc1/arch/arm/cpu/arm926ejs'
+make -C lib/
+make[1]: Entering directory `/home/engtien/Trek2000/u-boot-2010.06-rc1/lib'
+make[1]: `libgeneric.a' is up to date.
+make[1]: Leaving directory `/home/engtien/Trek2000/u-boot-2010.06-rc1/lib'
+make -C lib/lzma/
+make[1]: Entering directory `/home/engtien/Trek2000/u-boot-2010.06-rc1/lib/lzma'
+arm-none-linux-gnueabi-ar crv liblzma.a 
+make[1]: Leaving directory `/home/engtien/Trek2000/u-boot-2010.06-rc1/lib/lzma'
+make -C lib/lzo/
+make[1]: Entering directory `/home/engtien/Trek2000/u-boot-2010.06-rc1/lib/lzo'
+arm-none-linux-gnueabi-ar crv liblzo.a 
+make[1]: Leaving directory `/home/engtien/Trek2000/u-boot-2010.06-rc1/lib/lzo'
+make -C board/keyasic/common/
+make[1]: Entering directory `/home/engtien/Trek2000/u-boot-2010.06-rc1/board/keyasic/common'
+make[1]: `libkeyasic.a' is up to date.
+make[1]: Leaving directory `/home/engtien/Trek2000/u-boot-2010.06-rc1/board/keyasic/common'
+make -C arch/arm/cpu/arm926ejs/
+make[1]: Entering directory `/home/engtien/Trek2000/u-boot-2010.06-rc1/arch/arm/cpu/arm926ejs'
+make[1]: Nothing to be done for `all'.
+make[1]: Leaving directory `/home/engtien/Trek2000/u-boot-2010.06-rc1/arch/arm/cpu/arm926ejs'
+make -C arch/arm/cpu/arm926ejs/keyasic/
+make[1]: Entering directory `/home/engtien/Trek2000/u-boot-2010.06-rc1/arch/arm/cpu/arm926ejs/keyasic'
+make[1]: Nothing to be done for `all'.
+make[1]: Leaving directory `/home/engtien/Trek2000/u-boot-2010.06-rc1/arch/arm/cpu/arm926ejs/keyasic'
+make -C arch/arm/lib/
+make[1]: Entering directory `/home/engtien/Trek2000/u-boot-2010.06-rc1/arch/arm/lib'
+arm-none-linux-gnueabi-gcc  -g  -Os   -fno-common -ffixed-r8 -msoft-float  -fno-common -ffixed-r8 -msoft-float  -D__KERNEL__ -DTEXT_BASE=0x81080000 -I/home/engtien/Trek2000/u-boot-2010.06-rc1/include -fno-builtin -ffreestanding -nostdinc -isystem /home/engtien/Trek2000/arm-2010q1/bin/../lib/gcc/arm-none-linux-gnueabi/4.4.1/include -pipe  -DCONFIG_ARM -D__ARM__ -marm  -mabi=aapcs-linux -mno-thumb-interwork -march=armv5te -march=armv5te -Wall -Wstrict-prototypes -fno-stack-protector   \
+	-o board.o board.c -c
+arm-none-linux-gnueabi-ar crv libarm.a board.o bootm.o cache.o cache-cp15.o interrupts.o reset.o
+r - board.o
+r - bootm.o
+r - cache.o
+r - cache-cp15.o
+r - interrupts.o
+r - reset.o
+make[1]: Leaving directory `/home/engtien/Trek2000/u-boot-2010.06-rc1/arch/arm/lib'
+make -C fs/cramfs/
+make[1]: Entering directory `/home/engtien/Trek2000/u-boot-2010.06-rc1/fs/cramfs'
+arm-none-linux-gnueabi-ar crv libcramfs.a 
+make[1]: Leaving directory `/home/engtien/Trek2000/u-boot-2010.06-rc1/fs/cramfs'
+make -C fs/fat/
+make[1]: Entering directory `/home/engtien/Trek2000/u-boot-2010.06-rc1/fs/fat'
+arm-none-linux-gnueabi-ar crv libfat.a 
+make[1]: Leaving directory `/home/engtien/Trek2000/u-boot-2010.06-rc1/fs/fat'
+make -C fs/fdos/
+make[1]: Entering directory `/home/engtien/Trek2000/u-boot-2010.06-rc1/fs/fdos'
+arm-none-linux-gnueabi-ar crv libfdos.a 
+make[1]: Leaving directory `/home/engtien/Trek2000/u-boot-2010.06-rc1/fs/fdos'
+make -C fs/jffs2/
+make[1]: Entering directory `/home/engtien/Trek2000/u-boot-2010.06-rc1/fs/jffs2'
+arm-none-linux-gnueabi-ar crv libjffs2.a 
+make[1]: Leaving directory `/home/engtien/Trek2000/u-boot-2010.06-rc1/fs/jffs2'
+make -C fs/reiserfs/
+make[1]: Entering directory `/home/engtien/Trek2000/u-boot-2010.06-rc1/fs/reiserfs'
+arm-none-linux-gnueabi-ar crv libreiserfs.a 
+make[1]: Leaving directory `/home/engtien/Trek2000/u-boot-2010.06-rc1/fs/reiserfs'
+make -C fs/ext2/
+make[1]: Entering directory `/home/engtien/Trek2000/u-boot-2010.06-rc1/fs/ext2'
+arm-none-linux-gnueabi-ar crv libext2fs.a 
+make[1]: Leaving directory `/home/engtien/Trek2000/u-boot-2010.06-rc1/fs/ext2'
+make -C fs/yaffs2/
+make[1]: Entering directory `/home/engtien/Trek2000/u-boot-2010.06-rc1/fs/yaffs2'
+arm-none-linux-gnueabi-ar crv libyaffs2.a 
+make[1]: Leaving directory `/home/engtien/Trek2000/u-boot-2010.06-rc1/fs/yaffs2'
+make -C fs/ubifs/
+make[1]: Entering directory `/home/engtien/Trek2000/u-boot-2010.06-rc1/fs/ubifs'
+arm-none-linux-gnueabi-ar crv libubifs.a 
+make[1]: Leaving directory `/home/engtien/Trek2000/u-boot-2010.06-rc1/fs/ubifs'
+make -C net/
+make[1]: Entering directory `/home/engtien/Trek2000/u-boot-2010.06-rc1/net'
+make[1]: Nothing to be done for `all'.
+make[1]: Leaving directory `/home/engtien/Trek2000/u-boot-2010.06-rc1/net'
+make -C disk/
+make[1]: Entering directory `/home/engtien/Trek2000/u-boot-2010.06-rc1/disk'
+make[1]: Nothing to be done for `all'.
+make[1]: Leaving directory `/home/engtien/Trek2000/u-boot-2010.06-rc1/disk'
+make -C drivers/bios_emulator/
+make[1]: Entering directory `/home/engtien/Trek2000/u-boot-2010.06-rc1/drivers/bios_emulator'
+arm-none-linux-gnueabi-ar crv libatibiosemu.a 
+make[1]: Leaving directory `/home/engtien/Trek2000/u-boot-2010.06-rc1/drivers/bios_emulator'
+make -C drivers/block/
+make[1]: Entering directory `/home/engtien/Trek2000/u-boot-2010.06-rc1/drivers/block'
+arm-none-linux-gnueabi-ar crv libblock.a 
+make[1]: Leaving directory `/home/engtien/Trek2000/u-boot-2010.06-rc1/drivers/block'
+make -C drivers/dma/
+make[1]: Entering directory `/home/engtien/Trek2000/u-boot-2010.06-rc1/drivers/dma'
+arm-none-linux-gnueabi-ar crv libdma.a 
+make[1]: Leaving directory `/home/engtien/Trek2000/u-boot-2010.06-rc1/drivers/dma'
+make -C drivers/fpga/
+make[1]: Entering directory `/home/engtien/Trek2000/u-boot-2010.06-rc1/drivers/fpga'
+arm-none-linux-gnueabi-ar crv libfpga.a 
+make[1]: Leaving directory `/home/engtien/Trek2000/u-boot-2010.06-rc1/drivers/fpga'
+make -C drivers/gpio/
+make[1]: Entering directory `/home/engtien/Trek2000/u-boot-2010.06-rc1/drivers/gpio'
+arm-none-linux-gnueabi-ar crv libgpio.a 
+make[1]: Leaving directory `/home/engtien/Trek2000/u-boot-2010.06-rc1/drivers/gpio'
+make -C drivers/hwmon/
+make[1]: Entering directory `/home/engtien/Trek2000/u-boot-2010.06-rc1/drivers/hwmon'
+arm-none-linux-gnueabi-ar crv libhwmon.a 
+make[1]: Leaving directory `/home/engtien/Trek2000/u-boot-2010.06-rc1/drivers/hwmon'
+make -C drivers/i2c/
+make[1]: Entering directory `/home/engtien/Trek2000/u-boot-2010.06-rc1/drivers/i2c'
+arm-none-linux-gnueabi-ar crv libi2c.a 
+make[1]: Leaving directory `/home/engtien/Trek2000/u-boot-2010.06-rc1/drivers/i2c'
+make -C drivers/input/
+make[1]: Entering directory `/home/engtien/Trek2000/u-boot-2010.06-rc1/drivers/input'
+arm-none-linux-gnueabi-ar crv libinput.a 
+make[1]: Leaving directory `/home/engtien/Trek2000/u-boot-2010.06-rc1/drivers/input'
+make -C drivers/misc/
+make[1]: Entering directory `/home/engtien/Trek2000/u-boot-2010.06-rc1/drivers/misc'
+arm-none-linux-gnueabi-ar crv libmisc.a 
+make[1]: Leaving directory `/home/engtien/Trek2000/u-boot-2010.06-rc1/drivers/misc'
+make -C drivers/mmc/
+make[1]: Entering directory `/home/engtien/Trek2000/u-boot-2010.06-rc1/drivers/mmc'
+arm-none-linux-gnueabi-ar crv libmmc.a 
+make[1]: Leaving directory `/home/engtien/Trek2000/u-boot-2010.06-rc1/drivers/mmc'
+make -C drivers/mtd/
+make[1]: Entering directory `/home/engtien/Trek2000/u-boot-2010.06-rc1/drivers/mtd'
+make[1]: Nothing to be done for `all'.
+make[1]: Leaving directory `/home/engtien/Trek2000/u-boot-2010.06-rc1/drivers/mtd'
+make -C drivers/mtd/nand/
+make[1]: Entering directory `/home/engtien/Trek2000/u-boot-2010.06-rc1/drivers/mtd/nand'
+arm-none-linux-gnueabi-ar crv libnand.a 
+make[1]: Leaving directory `/home/engtien/Trek2000/u-boot-2010.06-rc1/drivers/mtd/nand'
+make -C drivers/mtd/onenand/
+make[1]: Entering directory `/home/engtien/Trek2000/u-boot-2010.06-rc1/drivers/mtd/onenand'
+arm-none-linux-gnueabi-ar crv libonenand.a 
+make[1]: Leaving directory `/home/engtien/Trek2000/u-boot-2010.06-rc1/drivers/mtd/onenand'
+make -C drivers/mtd/ubi/
+make[1]: Entering directory `/home/engtien/Trek2000/u-boot-2010.06-rc1/drivers/mtd/ubi'
+arm-none-linux-gnueabi-ar crv libubi.a 
+make[1]: Leaving directory `/home/engtien/Trek2000/u-boot-2010.06-rc1/drivers/mtd/ubi'
+make -C drivers/mtd/spi/
+make[1]: Entering directory `/home/engtien/Trek2000/u-boot-2010.06-rc1/drivers/mtd/spi'
+arm-none-linux-gnueabi-ar crv libspi_flash.a 
+make[1]: Leaving directory `/home/engtien/Trek2000/u-boot-2010.06-rc1/drivers/mtd/spi'
+make -C drivers/net/
+make[1]: Entering directory `/home/engtien/Trek2000/u-boot-2010.06-rc1/drivers/net'
+arm-none-linux-gnueabi-ar crv libnet.a 
+make[1]: Leaving directory `/home/engtien/Trek2000/u-boot-2010.06-rc1/drivers/net'
+make -C drivers/net/phy/
+make[1]: Entering directory `/home/engtien/Trek2000/u-boot-2010.06-rc1/drivers/net/phy'
+arm-none-linux-gnueabi-ar crv libphy.a 
+make[1]: Leaving directory `/home/engtien/Trek2000/u-boot-2010.06-rc1/drivers/net/phy'
+make -C drivers/pci/
+make[1]: Entering directory `/home/engtien/Trek2000/u-boot-2010.06-rc1/drivers/pci'
+arm-none-linux-gnueabi-ar crv libpci.a 
+make[1]: Leaving directory `/home/engtien/Trek2000/u-boot-2010.06-rc1/drivers/pci'
+make -C drivers/pcmcia/
+make[1]: Entering directory `/home/engtien/Trek2000/u-boot-2010.06-rc1/drivers/pcmcia'
+make[1]: Nothing to be done for `all'.
+make[1]: Leaving directory `/home/engtien/Trek2000/u-boot-2010.06-rc1/drivers/pcmcia'
+make -C drivers/power/
+make[1]: Entering directory `/home/engtien/Trek2000/u-boot-2010.06-rc1/drivers/power'
+arm-none-linux-gnueabi-ar crv libpower.a 
+make[1]: Leaving directory `/home/engtien/Trek2000/u-boot-2010.06-rc1/drivers/power'
+make -C drivers/spi/
+make[1]: Entering directory `/home/engtien/Trek2000/u-boot-2010.06-rc1/drivers/spi'
+arm-none-linux-gnueabi-ar crv libspi.a 
+make[1]: Leaving directory `/home/engtien/Trek2000/u-boot-2010.06-rc1/drivers/spi'
+make -C drivers/rtc/
+make[1]: Entering directory `/home/engtien/Trek2000/u-boot-2010.06-rc1/drivers/rtc'
+make[1]: Nothing to be done for `all'.
+make[1]: Leaving directory `/home/engtien/Trek2000/u-boot-2010.06-rc1/drivers/rtc'
+make -C drivers/serial/
+make[1]: Entering directory `/home/engtien/Trek2000/u-boot-2010.06-rc1/drivers/serial'
+make[1]: Nothing to be done for `all'.
+make[1]: Leaving directory `/home/engtien/Trek2000/u-boot-2010.06-rc1/drivers/serial'
+make -C drivers/twserial/
+make[1]: Entering directory `/home/engtien/Trek2000/u-boot-2010.06-rc1/drivers/twserial'
+arm-none-linux-gnueabi-ar crv libtws.a 
+make[1]: Leaving directory `/home/engtien/Trek2000/u-boot-2010.06-rc1/drivers/twserial'
+make -C drivers/usb/gadget/
+make[1]: Entering directory `/home/engtien/Trek2000/u-boot-2010.06-rc1/drivers/usb/gadget'
+arm-none-linux-gnueabi-ar crv libusb_gadget.a 
+make[1]: Leaving directory `/home/engtien/Trek2000/u-boot-2010.06-rc1/drivers/usb/gadget'
+make -C drivers/usb/host/
+make[1]: Entering directory `/home/engtien/Trek2000/u-boot-2010.06-rc1/drivers/usb/host'
+arm-none-linux-gnueabi-ar crv libusb_host.a 
+make[1]: Leaving directory `/home/engtien/Trek2000/u-boot-2010.06-rc1/drivers/usb/host'
+make -C drivers/usb/musb/
+make[1]: Entering directory `/home/engtien/Trek2000/u-boot-2010.06-rc1/drivers/usb/musb'
+arm-none-linux-gnueabi-ar crv libusb_musb.a 
+make[1]: Leaving directory `/home/engtien/Trek2000/u-boot-2010.06-rc1/drivers/usb/musb'
+make -C drivers/usb/phy/
+make[1]: Entering directory `/home/engtien/Trek2000/u-boot-2010.06-rc1/drivers/usb/phy'
+arm-none-linux-gnueabi-ar crv libusb_phy.a 
+make[1]: Leaving directory `/home/engtien/Trek2000/u-boot-2010.06-rc1/drivers/usb/phy'
+make -C drivers/video/
+make[1]: Entering directory `/home/engtien/Trek2000/u-boot-2010.06-rc1/drivers/video'
+arm-none-linux-gnueabi-ar crv libvideo.a 
+make[1]: Leaving directory `/home/engtien/Trek2000/u-boot-2010.06-rc1/drivers/video'
+make -C drivers/watchdog/
+make[1]: Entering directory `/home/engtien/Trek2000/u-boot-2010.06-rc1/drivers/watchdog'
+arm-none-linux-gnueabi-ar crv libwatchdog.a 
+make[1]: Leaving directory `/home/engtien/Trek2000/u-boot-2010.06-rc1/drivers/watchdog'
+make -C common/
+make[1]: Entering directory `/home/engtien/Trek2000/u-boot-2010.06-rc1/common'
+make[1]: Nothing to be done for `all'.
+make[1]: Leaving directory `/home/engtien/Trek2000/u-boot-2010.06-rc1/common'
+make -C lib/libfdt/
+make[1]: Entering directory `/home/engtien/Trek2000/u-boot-2010.06-rc1/lib/libfdt'
+arm-none-linux-gnueabi-ar crv libfdt.a 
+make[1]: Leaving directory `/home/engtien/Trek2000/u-boot-2010.06-rc1/lib/libfdt'
+make -C api/
+make[1]: Entering directory `/home/engtien/Trek2000/u-boot-2010.06-rc1/api'
+arm-none-linux-gnueabi-ar crv libapi.a 
+make[1]: Leaving directory `/home/engtien/Trek2000/u-boot-2010.06-rc1/api'
+make -C post/
+make[1]: Entering directory `/home/engtien/Trek2000/u-boot-2010.06-rc1/post'
+make[1]: Nothing to be done for `all'.
+make[1]: Leaving directory `/home/engtien/Trek2000/u-boot-2010.06-rc1/post'
+make -C board/keyasic/ka2000/
+make[1]: Entering directory `/home/engtien/Trek2000/u-boot-2010.06-rc1/board/keyasic/ka2000'
+make[1]: `libka2000.a' is up to date.
+make[1]: Leaving directory `/home/engtien/Trek2000/u-boot-2010.06-rc1/board/keyasic/ka2000'
+make -C /home/engtien/Trek2000/u-boot-2010.06-rc1/arch/arm/cpu/arm926ejs/ u-boot.lds
+make[1]: Entering directory `/home/engtien/Trek2000/u-boot-2010.06-rc1/arch/arm/cpu/arm926ejs'
+make[1]: Nothing to be done for `u-boot.lds'.
+make[1]: Leaving directory `/home/engtien/Trek2000/u-boot-2010.06-rc1/arch/arm/cpu/arm926ejs'
+UNDEF_SYM=`arm-none-linux-gnueabi-objdump -x board/keyasic/ka2000/libka2000.a lib/libgeneric.a lib/lzma/liblzma.a lib/lzo/liblzo.a board/keyasic/common/libkeyasic.a arch/arm/cpu/arm926ejs/libarm926ejs.a arch/arm/cpu/arm926ejs/keyasic/libkeyasic.a arch/arm/lib/libarm.a fs/cramfs/libcramfs.a fs/fat/libfat.a fs/fdos/libfdos.a fs/jffs2/libjffs2.a fs/reiserfs/libreiserfs.a fs/ext2/libext2fs.a fs/yaffs2/libyaffs2.a fs/ubifs/libubifs.a net/libnet.a disk/libdisk.a drivers/bios_emulator/libatibiosemu.a drivers/block/libblock.a drivers/dma/libdma.a drivers/fpga/libfpga.a drivers/gpio/libgpio.a drivers/hwmon/libhwmon.a drivers/i2c/libi2c.a drivers/input/libinput.a drivers/misc/libmisc.a drivers/mmc/libmmc.a drivers/mtd/libmtd.a drivers/mtd/nand/libnand.a drivers/mtd/onenand/libonenand.a drivers/mtd/ubi/libubi.a drivers/mtd/spi/libspi_flash.a drivers/net/libnet.a drivers/net/phy/libphy.a drivers/pci/libpci.a drivers/pcmcia/libpcmcia.a drivers/power/libpower.a drivers/spi/libspi.a drivers/rtc/librtc.a drivers/serial/libserial.a drivers/twserial/libtws.a drivers/usb/gadget/libusb_gadget.a drivers/usb/host/libusb_host.a drivers/usb/musb/libusb_musb.a drivers/usb/phy/libusb_phy.a drivers/video/libvideo.a drivers/watchdog/libwatchdog.a common/libcommon.a lib/libfdt/libfdt.a api/libapi.a post/libpost.a | sed  -n -e 's/.*\(__u_boot_cmd_.*\)/-u\1/p'|sort|uniq`; cd /home/engtien/Trek2000/u-boot-2010.06-rc1 && arm-none-linux-gnueabi-ld -Bstatic -T u-boot.lds  -Ttext 0x81080000 $UNDEF_SYM arch/arm/cpu/arm926ejs/start.o --start-group lib/libgeneric.a lib/lzma/liblzma.a lib/lzo/liblzo.a board/keyasic/common/libkeyasic.a arch/arm/cpu/arm926ejs/libarm926ejs.a arch/arm/cpu/arm926ejs/keyasic/libkeyasic.a arch/arm/lib/libarm.a fs/cramfs/libcramfs.a fs/fat/libfat.a fs/fdos/libfdos.a fs/jffs2/libjffs2.a fs/reiserfs/libreiserfs.a fs/ext2/libext2fs.a fs/yaffs2/libyaffs2.a fs/ubifs/libubifs.a net/libnet.a disk/libdisk.a drivers/bios_emulator/libatibiosemu.a drivers/block/libblock.a drivers/dma/libdma.a drivers/fpga/libfpga.a drivers/gpio/libgpio.a drivers/hwmon/libhwmon.a drivers/i2c/libi2c.a drivers/input/libinput.a drivers/misc/libmisc.a drivers/mmc/libmmc.a drivers/mtd/libmtd.a drivers/mtd/nand/libnand.a drivers/mtd/onenand/libonenand.a drivers/mtd/ubi/libubi.a drivers/mtd/spi/libspi_flash.a drivers/net/libnet.a drivers/net/phy/libphy.a drivers/pci/libpci.a drivers/pcmcia/libpcmcia.a drivers/power/libpower.a drivers/spi/libspi.a drivers/rtc/librtc.a drivers/serial/libserial.a drivers/twserial/libtws.a drivers/usb/gadget/libusb_gadget.a drivers/usb/host/libusb_host.a drivers/usb/musb/libusb_musb.a drivers/usb/phy/libusb_phy.a drivers/video/libvideo.a drivers/watchdog/libwatchdog.a common/libcommon.a lib/libfdt/libfdt.a api/libapi.a post/libpost.a board/keyasic/ka2000/libka2000.a --end-group /home/engtien/Trek2000/u-boot-2010.06-rc1/arch/arm/lib/eabi_compat.o -L /home/engtien/Trek2000/arm-2010q1/bin/../lib/gcc/arm-none-linux-gnueabi/4.4.1 -lgcc -Map u-boot.map -o u-boot
+arm-none-linux-gnueabi-objcopy -O srec u-boot u-boot.srec
+arm-none-linux-gnueabi-objcopy --gap-fill=0xff -O binary u-boot u-boot.bin
