@@ -7,9 +7,9 @@ WARNING: alpha quality software, read the instructions in the installation secti
 
 This project fixes the U-Boot port published by Transcend in source format. The SD controller driver was broken, not allowing access from U-Boot and leaving the controller in an inconsistent state which prevented the Linux driver from working as well.
 
-A few other improvements have been implemented. See the list below for a complete list.
+A few other improvements have been implemented. Look below for a complete list.
 
-Note that this port is hacked in and held together by duct tape, but since the required functionality is quite limited, I don't think it would be worth the time to clean it up and merge it with a more recent U-Boot version.
+Note that this port is [hacked in and held together by duct tape](http://cdn.edu-search.com/uploads/duct-tape.jpg), but since the required functionality is quite limited, I don't think it would be worth the time to clean it up and merge it with a more recent U-Boot version.
 
 
 Build instructions
