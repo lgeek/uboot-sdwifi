@@ -54,24 +54,27 @@ uint32_t mmc_bread(int dev_num, uint32_t blknr, lbaint_t blkcnt, void *dst)
 {
 	int i = 0;
 	int n = blkcnt;
-	int m = 512;
+	int m = 255;
 	
 	SelectM2();
 
 	for (i = 0; i + m < blkcnt; i += m)
 	{
-		CardRead_single_pin((unsigned int)dst, blknr, m);
+		if (CardRead_single_pin((unsigned int)dst, blknr, m)) goto ret;
 		dst += m * 512;
 		blknr += m;
 		n -= m;
 	}
 
-	if (n > 0)
-		CardRead_single_pin((unsigned int)dst, blknr, n);
-		
+	if (n > 0) {
+		if (CardRead_single_pin((unsigned int)dst, blknr, n)) goto ret;
+	}
+	n = 0;
+
+ret:		
 	DeselectM2();
 
-	return 1;
+	return blkcnt - n;
 }
 
 
